@@ -1,0 +1,31 @@
+{
+"name" : "Tester1",
+
+"email" : "Tester1@example.com",
+
+"password" : "Tester1PW",
+
+"birthDay" : "10",
+
+"birthMonth" : "5",
+
+"birthYear" : "1980",
+
+"firstName" : "John",
+
+"lastName" : "Doe",
+
+"company" : "Test Academy",
+
+"address" : "132 My Street",
+
+"country" : "United States",
+
+"state" : "New York",
+
+"city" : "Kingston",
+
+"zip" : "12401",
+
+"mobile" : "123456789"
+}

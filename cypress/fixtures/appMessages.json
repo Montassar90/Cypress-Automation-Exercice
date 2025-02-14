@@ -1,0 +1,6 @@
+{
+    "signupSuccessExpectedMsg" : "Account Created!",
+    "signupErrExpectedMsg" : "Email Address already exist!",
+    "loginSuccessExpectedMsg" : "Tester1",
+    "loginErrExpectedMsg" : "Your email or password is incorrect!"
+}
