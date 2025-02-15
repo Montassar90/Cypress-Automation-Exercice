@@ -1,7 +1,8 @@
-import SignUpPage from "../../support/pageObjects/SignUpPage";
-import userSignupData from "../../fixtures/userSignupData.json";
-import appMessages from  "../../fixtures/appMessages.json";
+import SignUpPage from "../support/pageObjects/SignUpPage";
+import userSignupData from "../fixtures/userSignupData.json";
+import appMessages from  "../fixtures/appMessages.json";
 
+//Signup Test Suite
 describe('Signup Tests',() =>{
     beforeEach(() => {
     cy.visit(Cypress.env('URL'))
