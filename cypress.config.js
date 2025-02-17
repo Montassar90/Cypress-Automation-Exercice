@@ -10,6 +10,7 @@ module.exports = defineConfig({
     specPattern: [
     "cypress\\e2e\\SignUp.cy.js",
     "cypress\\e2e\\Login.cy.js",
+    "cypress\\e2e\\Products.cy.js",
     ]
     
   },

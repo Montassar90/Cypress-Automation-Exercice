@@ -18,7 +18,7 @@ describe('Login Tests', () => {
         LoginPage.elements.loginSuccesMsg().should('have.text', appMessages.loginSuccessExpectedMsg);
     })
 
-    it('Login with valid credentials', () => {
+    it('Login with invalid credentials', () => {
         const inValidUser = userLoginData.users[1];
         LoginPage.clickLoginLink();
         LoginPage.fillEmailInput(inValidUser.email);
