@@ -8,6 +8,17 @@ class ProductsPage {
         productName : () => cy.get('.productinfo.text-center p'),
         addToCartButton : () => cy.get('.productinfo.text-center a'),
         viewProductLink : () => cy.get('.choose a'),
+        productViewImage : () => cy.get('.view-product img'),
+        productViewName : () => cy.get('.product-information h2'),
+        productViewCategory : () => cy.get('.product-information p:first-of-type'),
+        productViewRating : () => cy.get('.product-information img:last-of-type'),
+        productViewPrice : () => cy.get('.product-information span:first-child'),
+        productViewQtLabel : () => cy.get('.product-information label'),
+        productViewQtInput : () => cy.get('#quantity'),
+        productViewCartBtn : () => cy.get('.btn.btn-default.cart'),
+        productViewAvailability : () => cy.get('.product-information :nth-child(6)'),
+        productViewCondition : () => cy.get('.product-information :nth-child(7)'),
+        productViewBrand : () => cy.get('.product-information :nth-child(8)')
     }
 
     clickProductsLink() {
@@ -18,9 +29,6 @@ class ProductsPage {
         this.elements.addToCartButton().click();
     }
 
-    viewProduct() {
-        this.elements.viewProductLink().click();
-    }
 }
 
-export default new ProductsPage();
+export default new ProductsPage;

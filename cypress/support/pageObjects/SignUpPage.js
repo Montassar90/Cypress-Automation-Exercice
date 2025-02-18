@@ -96,4 +96,4 @@ class SignUpPage {
   }
 }
 // Exports an instance of the SignUpPage class for use in test scripts
-export default new SignUpPage();
+export default new SignUpPage;
