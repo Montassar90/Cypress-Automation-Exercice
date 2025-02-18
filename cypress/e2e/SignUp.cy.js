@@ -6,9 +6,9 @@ import appMessages from  "../fixtures/appMessages.json";
 describe('Signup Tests',() =>{
     beforeEach(() => {
     cy.visit(Cypress.env('URL'))
+    SignUpPage.clickSignUpLink()
     })
 it('New user succesfull registration',() =>{
-    SignUpPage.clickSignUpLink()
     SignUpPage.fillNameInput(userSignupData.name)
     SignUpPage.fillEmailInput(userSignupData.email)
     SignUpPage.clickSignUpBtn()
@@ -29,7 +29,6 @@ it('New user succesfull registration',() =>{
 
 })
 it('Register again with existing Email Adress',() =>{
-    SignUpPage.clickSignUpLink()
     SignUpPage.fillNameInput(userSignupData.name)
     SignUpPage.fillEmailInput(userSignupData.email)
     SignUpPage.clickSignUpBtn()
