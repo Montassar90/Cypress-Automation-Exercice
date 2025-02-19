@@ -5,8 +5,10 @@
   "scripts": {
     "test": "node_modules\\.bin\\cypress run",
     "headlessTest": "npm run test -- --headless",
-    "headTest": "npm run test -- --headed"
-
+    "headTest": "npm run test -- --headed",
+    "chromeTest": "npm run test -- --browser chrome",
+    "firefoxTest": "npm run test -- --browser firefox",
+    "edgeTest": "npm run test -- --browser edge"
   },
   "author": "",
   "license": "ISC",
