@@ -12,15 +12,10 @@ pipeline {
             }
         }
         stage('Test') {
-            stages {
+            stages { // Les sous-stages sont exécutés l'un après l'autre
                 stage('Test on Chrome Browser') {
                     steps {
                         bat 'npm run chromeTest'
-                    }
-                }
-                stage('Test on Firefox Browser') {
-                    steps {
-                        bat 'npm run firefoxTest'
                     }
                 }
                 stage('Test on Edge Browser') {
@@ -30,19 +25,6 @@ pipeline {
                 }
             }
             post {
-                always {
-                    script {
-                        archiveArtifacts artifacts: 'reports/html/index.html', allowEmptyArchive: true
-                    }
-                    publishHTML([
-                        allowMissing: false,
-                        alwaysLinkToLastBuild: false,
-                        keepAll: true,
-                        reportDir: 'cypressAutomation\cypress\reports\html\index.html',
-                        reportFiles: 'index.html',
-                        reportName: 'HTML Report'
-                    ])
-                }
                 failure {
                     echo 'Build failed. Check the test reports for details.'
                 }
