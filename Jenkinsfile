@@ -38,7 +38,7 @@ pipeline {
                         allowMissing: false,
                         alwaysLinkToLastBuild: false,
                         keepAll: true,
-                        reportDir: 'cypress/cypress/reports/html',
+                        reportDir: 'cypressAutomation\cypress\reports\html\index.html',
                         reportFiles: 'index.html',
                         reportName: 'HTML Report'
                     ])
