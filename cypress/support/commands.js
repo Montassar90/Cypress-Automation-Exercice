@@ -1,3 +1,4 @@
+import userLoginData from "../fixtures/userLoginData.json";
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
@@ -23,3 +24,11 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add("login", () => {
+    const user = userLoginData.users[0];
+    cy.visit(Cypress.env('URL'))
+    cy.get('a[href="/login"]').click()
+    cy.get('input[data-qa="login-email"]').type(user.email)
+    cy.get('input[data-qa="login-password"]').type(user.password)
+    cy.get('button[data-qa="login-button"]').click()
+  });

@@ -11,6 +11,7 @@ module.exports = defineConfig({
     "cypress\\e2e\\SignUp.cy.js",
     "cypress\\e2e\\Login.cy.js",
     "cypress\\e2e\\Products.cy.js",
+    "cypress\\e2e\\DeleteUser.cy.js",
     ]
     
   },
