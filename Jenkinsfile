@@ -12,18 +12,22 @@ pipeline {
             }
         }
         stage('Test') {
-            stage('Test on Chrome Browser')
-            steps {
-                bat 'npm chromeTest'
+            stage('Test on Chrome Browser') {
+                steps {
+                    bat 'npm chromeTest'
+                }
             }
-            stage('Test on Firefox Browser')
-            steps {
-                bat 'npm firefoxTest'
+            stage('Test on Firefox Browser') {
+                steps {
+                    bat 'npm firefoxTest'
+                }
             }
-            stage('Test on Edge Browser')
-            steps {
-                bat 'npm edgeTest'
+            stage('Test on Edge Browser') {
+                steps {
+                    bat 'npm edgeTest'
+                }
             }
+
             post {
                 always {
                     script {
