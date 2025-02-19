@@ -15,17 +15,17 @@ pipeline {
             stages {
                 stage('Test on Chrome Browser') {
                     steps {
-                        bat 'npm chromeTest'
+                        bat 'npm run chromeTest'
                     }
                 }
                 stage('Test on Firefox Browser') {
                     steps {
-                        bat 'npm firefoxTest'
+                        bat 'npm run firefoxTest'
                     }
                 }
                 stage('Test on Edge Browser') {
                     steps {
-                        bat 'npm edgeTest'
+                        bat 'npm run edgeTest'
                     }
                 }
             }
